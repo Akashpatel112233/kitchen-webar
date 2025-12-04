@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Modular Kitchen AR Viewer</title>
+
+  <!-- MODEL VIEWER CDN -->
+  <script type="module"
+    src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js">
+  </script>
+
+  <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Kitchen AR Visualizer</h1>
+    <p>View your modular kitchen in your actual space using Augmented Reality</p>
+  </header>
+
+  <div class="product-wrapper">
+
+    <!-- KITCHEN PRODUCT CARD -->
+    <div class="product-card">
+      <img src="assets/images/product.png" class="thumb" />
+      <h2>Premium Modular Kitchen</h2>
+
+      <model-viewer 
+        src="assets/models/pr.glb"
+        ios-src="assets/models/kitchen.usdz"
+        ar
+        camera-controls
+        auto-rotate
+        shadow-intensity="1"
+        style="width:100%; height:380px;">
+      </model-viewer>
+
+      <button class="ar-btn">View Kitchen in AR</button>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2025 Your Interior Company – WebAR Kitchen Visualizer
+  </footer>
+
+  <script src="scripts/script.js"></script>
+
+</body>
+</html>
