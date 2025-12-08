@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Straight Shape Kitchen</title>
+
+    <link rel="stylesheet" href="assets/styles/style.css">
+    
+    <style>
+        .gallery {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .thumb {
+            width: 250px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .thumb img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+        h1 {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Select Straight Shape Kitchen</h1>
+
+<div class="gallery">
+
+    <!-- MODEL 1 -->
+    <div class="thumb" onclick="openAR('assets/models/p.glb')">
+        <img src="assets/thumbnails/straight/p1.png">
+        <p>Design 1</p>
+    </div>
+
+    <!-- MODEL 2 -->
+    <div class="thumb" onclick="openAR('assets/models/product2.glb')">
+        <img src="assets/thumbnails/straight/p2.png">
+        <p>Design 2</p>
+    </div>
+    <!-- MODEL 3 -->
+    <div class="thumb" onclick="openAR('assets/models/product2.glb')">
+        <img src="assets/thumbnails/straight/p3.png">
+        <p>Design 2</p>
+    </div>
+    <!-- MODEL 4 -->
+    <div class="thumb" onclick="openAR('assets/models/product2.glb')">
+        <img src="assets/thumbnails/straight/p4.png">
+        <p>Design 2</p>
+    </div>
+    <!-- MODEL 5 -->
+    <div class="thumb" onclick="openAR('assets/models/product2.glb')">
+        <img src="assets/thumbnails/straight/p5.png">
+        <p>Design 2</p>
+    </div>
+
+</div>
+
+<script>
+function openAR(model) {
+    window.location.href = "ar.html?model=" + encodeURIComponent(model);
+}
+</script>
+
+</body>
+</html>

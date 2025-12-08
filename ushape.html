@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>L-Shape Kitchen AR</title>
+
+  <script type="module"
+    src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js">
+  </script>
+
+  <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>L-Shape Kitchen</h1>
+</header>
+
+<div class="product-wrapper">
+
+    <div class="product-card">
+        <model-viewer src="assets/models/lshape.glb"
+                      ios-src="assets/models/lshape.usdz"
+                      ar
+                      camera-controls
+                      auto-rotate></model-viewer>
+
+        <button class="ar-btn">View in AR</button>
+    </div>
+
+</div>
+
+<script src="scripts/script.js"></script>
+</body>
+</html>
