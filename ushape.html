@@ -1,36 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>L-Shape Kitchen AR</title>
+    <meta charset="UTF-8">
+    <title>L-Shape Kitchens</title>
 
-  <script type="module"
-    src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js">
-  </script>
-
-  <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    
+    <style>
+        .gallery {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .thumb {
+            width: 250px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .thumb img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+        h1 {
+            padding-left: 20px;
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-    <h1>L-Shape Kitchen</h1>
-</header>
+<h1>Select Your L-Shape Kitchen</h1>
 
-<div class="product-wrapper">
+<div class="gallery">
 
-    <div class="product-card">
-        <model-viewer src="assets/models/lshape.glb"
-                      ios-src="assets/models/lshape.usdz"
-                      ar
-                      camera-controls
-                      auto-rotate></model-viewer>
+    <!-- MODEL 1 -->
+    <div class="thumb" onclick="openAR('assets/models/styles/ushape/test.glb')">
+        <img src="assets/thumbnails/lshape/p1.jpeg">
+        <p>Design 1</p>
+    </div>
 
-        <button class="ar-btn">View in AR</button>
+    <!-- MODEL 2 -->
+    <div class="thumb" onclick="openAR('assets/models/product2.glb')">
+        <img src="assets/thumbnails/lshape/p2.jpeg">
+        <p>Design 2</p>
     </div>
 
 </div>
 
-<script src="scripts/script.js"></script>
+<script>
+function openAR(model) {
+    window.location.href = "ar.html?model=" + encodeURIComponent(model);
+}
+</script>
+
 </body>
 </html>
